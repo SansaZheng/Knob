@@ -1,0 +1,43 @@
+{
+  "dataset": "sd-stock",
+  "method": "anomaly-transformer",
+  "variant": "unsupervised",
+  "seed": 42,
+  "validation": {
+    "n": 800,
+    "positives": 61,
+    "prevalence": 0.07625,
+    "AP": 0.06879398427483893,
+    "ROC_AUC": 0.1900219614454624,
+    "precision": 0.07625,
+    "recall": 1.0,
+    "F1": 0.14169570267131243,
+    "TP": 61,
+    "FP": 739,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "test": {
+    "n": 960,
+    "positives": 99,
+    "prevalence": 0.103125,
+    "AP": 0.08855048377819569,
+    "ROC_AUC": 0.25988690622836963,
+    "precision": 0.103125,
+    "recall": 1.0,
+    "F1": 0.18696883852691218,
+    "TP": 99,
+    "FP": 861,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "threshold_rule": "max validation F1",
+  "window": 160,
+  "epochs": 30,
+  "d_model": 64,
+  "layers": 3,
+  "supervision": "none for fitting; validation labels pick threshold only",
+  "causal": false
+}

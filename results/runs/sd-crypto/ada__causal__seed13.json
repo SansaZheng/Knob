@@ -1,0 +1,40 @@
+{
+  "dataset": "sd-crypto",
+  "method": "ada",
+  "variant": "causal",
+  "seed": 13,
+  "validation": {
+    "n": 10720,
+    "positives": 67,
+    "prevalence": 0.00625,
+    "AP": 0.6860318066156771,
+    "ROC_AUC": 0.9956007066890273,
+    "precision": 0.5714285714285714,
+    "recall": 0.7164179104477612,
+    "F1": 0.6357615894039734,
+    "TP": 48,
+    "FP": 36,
+    "FN": 19,
+    "TN": 10617,
+    "threshold": 0.4418076520719627
+  },
+  "test": {
+    "n": 10880,
+    "positives": 68,
+    "prevalence": 0.00625,
+    "AP": 0.668725054260616,
+    "ROC_AUC": 0.9864318785227743,
+    "precision": 0.5584415584415584,
+    "recall": 0.6323529411764706,
+    "F1": 0.5931034482758619,
+    "TP": 43,
+    "FP": 34,
+    "FN": 25,
+    "TN": 10778,
+    "threshold": 0.4418076520719627
+  },
+  "threshold_rule": "max validation F1",
+  "features": 7,
+  "train_rows": 32320,
+  "train_positives": 202
+}

@@ -1,0 +1,38 @@
+{
+  "dataset": "sd-stock",
+  "method": "position-only",
+  "variant": "control",
+  "seed": 0,
+  "validation": {
+    "n": 800,
+    "positives": 61,
+    "prevalence": 0.07625,
+    "AP": 0.07308523443769346,
+    "ROC_AUC": 0.46683599902393574,
+    "precision": 0.07625,
+    "recall": 1.0,
+    "F1": 0.14169570267131243,
+    "TP": 61,
+    "FP": 739,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "test": {
+    "n": 960,
+    "positives": 99,
+    "prevalence": 0.103125,
+    "AP": 0.0971114848955758,
+    "ROC_AUC": 0.43055995495019883,
+    "precision": 0.103125,
+    "recall": 1.0,
+    "F1": 0.18696883852691218,
+    "TP": 99,
+    "FP": 861,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "threshold_rule": "max validation F1",
+  "note": "train label frequency by index within the sequence; uses no market feature"
+}

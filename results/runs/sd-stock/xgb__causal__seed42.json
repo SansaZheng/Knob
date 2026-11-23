@@ -1,0 +1,40 @@
+{
+  "dataset": "sd-stock",
+  "method": "xgb",
+  "variant": "causal",
+  "seed": 42,
+  "validation": {
+    "n": 800,
+    "positives": 61,
+    "prevalence": 0.07625,
+    "AP": 0.4208261171280215,
+    "ROC_AUC": 0.8212249606246811,
+    "precision": 0.4090909090909091,
+    "recall": 0.5901639344262295,
+    "F1": 0.4832214765100671,
+    "TP": 36,
+    "FP": 52,
+    "FN": 25,
+    "TN": 687,
+    "threshold": 0.3453020453453064
+  },
+  "test": {
+    "n": 960,
+    "positives": 99,
+    "prevalence": 0.103125,
+    "AP": 0.4395688937119464,
+    "ROC_AUC": 0.7913631084362792,
+    "precision": 0.40869565217391307,
+    "recall": 0.47474747474747475,
+    "F1": 0.4392523364485982,
+    "TP": 47,
+    "FP": 68,
+    "FN": 52,
+    "TN": 793,
+    "threshold": 0.3453020453453064
+  },
+  "threshold_rule": "max validation F1",
+  "features": 7,
+  "train_rows": 2560,
+  "train_positives": 333
+}

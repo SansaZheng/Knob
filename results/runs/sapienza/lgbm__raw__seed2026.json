@@ -1,0 +1,40 @@
+{
+  "dataset": "sapienza",
+  "method": "lgbm",
+  "variant": "raw",
+  "seed": 2026,
+  "validation": {
+    "n": 111451,
+    "positives": 50,
+    "prevalence": 0.00044862764802469245,
+    "AP": 0.6855163063795994,
+    "ROC_AUC": 0.9798627480902327,
+    "precision": 0.7258064516129032,
+    "recall": 0.9,
+    "F1": 0.8035714285714286,
+    "TP": 45,
+    "FP": 17,
+    "FN": 5,
+    "TN": 111384,
+    "threshold": 1.0
+  },
+  "test": {
+    "n": 145550,
+    "positives": 77,
+    "prevalence": 0.0005290278254895225,
+    "AP": 0.598353370928812,
+    "ROC_AUC": 0.9868040849460082,
+    "precision": 0.6239316239316239,
+    "recall": 0.948051948051948,
+    "F1": 0.7525773195876289,
+    "TP": 73,
+    "FP": 44,
+    "FN": 4,
+    "TN": 145429,
+    "threshold": 1.0
+  },
+  "threshold_rule": "max validation F1",
+  "features": 13,
+  "train_rows": 327103,
+  "train_positives": 190
+}

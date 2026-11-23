@@ -1,0 +1,41 @@
+{
+  "dataset": "sd-crypto",
+  "method": "sd-fmm-public",
+  "variant": "synthetic",
+  "seed": 13,
+  "validation": {
+    "n": 10720,
+    "positives": 67,
+    "prevalence": 0.00625,
+    "AP": 0.14282230756282777,
+    "ROC_AUC": 0.9373254818557171,
+    "precision": 0.20353982300884957,
+    "recall": 0.34328358208955223,
+    "F1": 0.2555555555555556,
+    "TP": 23,
+    "FP": 90,
+    "FN": 44,
+    "TN": 10563,
+    "threshold": 0.9969504475593567
+  },
+  "test": {
+    "n": 10880,
+    "positives": 68,
+    "prevalence": 0.00625,
+    "AP": 0.1622797637299724,
+    "ROC_AUC": 0.9321478313856065,
+    "precision": 0.21739130434782608,
+    "recall": 0.22058823529411764,
+    "F1": 0.21897810218978103,
+    "TP": 15,
+    "FP": 54,
+    "FN": 53,
+    "TN": 10758,
+    "threshold": 0.9969504475593567
+  },
+  "threshold_rule": "max validation F1",
+  "epochs": 200,
+  "synthetic_holdout_F1": 0.9470819473843363,
+  "causal": false,
+  "supervision": "synthetic anomalies only; real validation labels pick threshold only"
+}

@@ -1,0 +1,43 @@
+{
+  "dataset": "sd-crypto",
+  "method": "anomaly-transformer",
+  "variant": "unsupervised",
+  "seed": 13,
+  "validation": {
+    "n": 10720,
+    "positives": 67,
+    "prevalence": 0.00625,
+    "AP": 0.00625,
+    "ROC_AUC": 0.4884539566319347,
+    "precision": 0.00625,
+    "recall": 1.0,
+    "F1": 0.012422360248447204,
+    "TP": 67,
+    "FP": 10653,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "test": {
+    "n": 10880,
+    "positives": 68,
+    "prevalence": 0.00625,
+    "AP": 0.009039664057186063,
+    "ROC_AUC": 0.5258162227155013,
+    "precision": 0.00625,
+    "recall": 1.0,
+    "F1": 0.012422360248447204,
+    "TP": 68,
+    "FP": 10812,
+    "FN": 0,
+    "TN": 0,
+    "threshold": 0.0
+  },
+  "threshold_rule": "max validation F1",
+  "window": 160,
+  "epochs": 30,
+  "d_model": 64,
+  "layers": 3,
+  "supervision": "none for fitting; validation labels pick threshold only",
+  "causal": false
+}

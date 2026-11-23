@@ -1,0 +1,41 @@
+{
+  "dataset": "sd-crypto",
+  "method": "sd-fmm-public",
+  "variant": "finetune",
+  "seed": 42,
+  "validation": {
+    "n": 10720,
+    "positives": 67,
+    "prevalence": 0.00625,
+    "AP": 0.6281492659293945,
+    "ROC_AUC": 0.9969695313911994,
+    "precision": 0.5339805825242718,
+    "recall": 0.8208955223880597,
+    "F1": 0.6470588235294117,
+    "TP": 55,
+    "FP": 48,
+    "FN": 12,
+    "TN": 10605,
+    "threshold": 0.2238297164440155
+  },
+  "test": {
+    "n": 10880,
+    "positives": 68,
+    "prevalence": 0.00625,
+    "AP": 0.6663068503845685,
+    "ROC_AUC": 0.9923587081891581,
+    "precision": 0.48514851485148514,
+    "recall": 0.7205882352941176,
+    "F1": 0.5798816568047336,
+    "TP": 49,
+    "FP": 52,
+    "FN": 19,
+    "TN": 10760,
+    "threshold": 0.2238297164440155
+  },
+  "threshold_rule": "max validation F1",
+  "pretrain_epochs": 200,
+  "finetune_epochs": 60,
+  "causal": false,
+  "supervision": "synthetic pretraining, then real research-train labels"
+}

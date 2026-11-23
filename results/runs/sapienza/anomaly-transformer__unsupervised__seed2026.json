@@ -1,0 +1,43 @@
+{
+  "dataset": "sapienza",
+  "method": "anomaly-transformer",
+  "variant": "unsupervised",
+  "seed": 2026,
+  "validation": {
+    "n": 111451,
+    "positives": 50,
+    "prevalence": 0.00044862764802469245,
+    "AP": 0.0004551830453747576,
+    "ROC_AUC": 0.49917289790935454,
+    "precision": 0.0007763975155279503,
+    "recall": 0.02,
+    "F1": 0.0014947683109118085,
+    "TP": 1,
+    "FP": 1287,
+    "FN": 49,
+    "TN": 110114,
+    "threshold": 1.8146934962715022e-05
+  },
+  "test": {
+    "n": 145550,
+    "positives": 77,
+    "prevalence": 0.0005290278254895225,
+    "AP": 0.05244959780858098,
+    "ROC_AUC": 0.5160160036838183,
+    "precision": 0.0023837902264600714,
+    "recall": 0.05194805194805195,
+    "F1": 0.004558404558404559,
+    "TP": 4,
+    "FP": 1674,
+    "FN": 73,
+    "TN": 143799,
+    "threshold": 1.8146934962715022e-05
+  },
+  "threshold_rule": "max validation F1",
+  "window": 100,
+  "epochs": 10,
+  "d_model": 64,
+  "layers": 3,
+  "supervision": "none for fitting; validation labels pick threshold only",
+  "causal": false
+}
