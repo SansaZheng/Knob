@@ -47,7 +47,7 @@ def record(dataset, method, variant, seed, y_val, s_val, y_test, s_test, extra=N
     if save_scores:
         scores = RESULTS / 'test_scores' / dataset
         scores.mkdir(parents=True, exist_ok=True)
-        np.savez_compressed(scores / f'{stem}.npz', score=np.asarray(s_test, dtype=np.float32),
+        np.savez_compressed(scores / f'{stem}.npz', score=np.asarray(s_test),   # native precision
                             threshold=np.float64(threshold))
     print(f"{dataset:10s} {method:22s} {variant:12s} seed={seed:<5d} "
           f"val AP={out['validation']['AP']:.4f} | test AP={out['test']['AP']:.4f} "

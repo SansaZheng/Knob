@@ -1,0 +1,65 @@
+{
+  "rows": 24386900,
+  "positives": 29757,
+  "day_boundaries": [
+    16779,
+    17558
+  ],
+  "features_raw": [
+    "log_amount",
+    "refund",
+    "hour",
+    "weekday",
+    "chip_code",
+    "mcc",
+    "state_code",
+    "online",
+    "foreign",
+    "zip_missing",
+    "err_bad_pin",
+    "err_insufficient_balance",
+    "err_technical_glitch",
+    "err_bad_card_number",
+    "err_bad_cvv",
+    "err_bad_expiration",
+    "err_bad_zipcode"
+  ],
+  "features_agg": [
+    "card_gap_log",
+    "user_gap_log",
+    "card_n_1h",
+    "card_n_24h",
+    "card_n_7d",
+    "card_amt_24h_log",
+    "card_amt_7d_log",
+    "user_amt_ratio",
+    "user_amt_z",
+    "user_prior_n_log",
+    "um_prior_n_log",
+    "um_gap_log",
+    "umcc_prior_frac",
+    "ustate_prior_frac",
+    "city_changed",
+    "state_changed",
+    "user_online_frac",
+    "merchant_prior_n_log",
+    "user_err_24h",
+    "chip_changed"
+  ],
+  "splits": {
+    "train": {
+      "rows": 17068962,
+      "positives": 20886
+    },
+    "validation": {
+      "rows": 3658985,
+      "positives": 4417
+    },
+    "test": {
+      "rows": 3658953,
+      "positives": 4454
+    }
+  },
+  "users": 2000,
+  "cards": 6139
+}

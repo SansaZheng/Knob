@@ -87,7 +87,7 @@ def main():
         ax.barh(labels, t.test_AP, xerr=t.test_AP_sd.fillna(0), color=colors)
         for y, (ap, f1) in enumerate(zip(t.test_AP, t.test_F1)):
             ax.text(ap + 0.01, y, f'{ap:.3f} / F1 {f1:.3f}', va='center', fontsize=7.5)
-        ax.set_xlim(0, 1.18); ax.set_title(f'{TITLES[d]}  (test AP, mean of seeds)', fontsize=10)
+        ax.set_xlim(0, min(1.18, float(t.test_AP.max()) * 1.7)); ax.set_title(f'{TITLES[d]}  (test AP, mean of seeds)', fontsize=10)
         ax.tick_params(axis='y', labelsize=7.5); ax.axvline(float(t.test_positives.iloc[0]) / float(t.test_n.iloc[0]), color='orange', ls='--', lw=1)
     fig.suptitle(f'Supervised baselines vs recorded Kronos-mini — red: method chosen by validation rule ({chosen}); grey: Kronos records; orange dashes: anomaly rate', fontsize=10)
     fig.tight_layout(); fig.savefig(RESULTS / 'test_AP_by_method.png', dpi=140)

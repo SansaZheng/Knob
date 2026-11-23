@@ -1,0 +1,6 @@
+{
+  "files_checked": 99,
+  "max_abs_AP_difference": 0.00017018957037739924,
+  "alert_count_mismatches": [],
+  "note": "alerts are recomputed from the stored scores with the stored threshold"
+}

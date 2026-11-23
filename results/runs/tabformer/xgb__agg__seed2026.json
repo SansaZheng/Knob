@@ -1,0 +1,43 @@
+{
+  "dataset": "tabformer",
+  "method": "xgb",
+  "variant": "agg",
+  "seed": 2026,
+  "validation": {
+    "n": 3658985,
+    "positives": 4417,
+    "prevalence": 0.0012071653750971923,
+    "AP": 0.7586673216192208,
+    "ROC_AUC": 0.9956627268266908,
+    "precision": 0.8002195389681669,
+    "recall": 0.6601765904460041,
+    "F1": 0.7234834387793079,
+    "TP": 2916,
+    "FP": 728,
+    "FN": 1501,
+    "TN": 3653840,
+    "threshold": 0.9083992838859558
+  },
+  "test": {
+    "n": 3658953,
+    "positives": 4454,
+    "prevalence": 0.001217288114933425,
+    "AP": 0.0649368003742095,
+    "ROC_AUC": 0.975359771966888,
+    "precision": 0.12103004291845494,
+    "recall": 0.03165693758419398,
+    "F1": 0.05018686599038975,
+    "TP": 141,
+    "FP": 1024,
+    "FN": 4313,
+    "TN": 3653475,
+    "threshold": 0.9083992838859558
+  },
+  "threshold_rule": "max validation F1",
+  "features": 37,
+  "train_rows": 2021263,
+  "train_positives": 20886,
+  "train_negative_sample": 2000000,
+  "rounds": 59,
+  "fit_and_score_seconds": 97.7
+}

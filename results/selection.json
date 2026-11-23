@@ -1,0 +1,118 @@
+{
+  "rule": "(fixed in this file before the summary was produced; test labels are not used):\n  1. dataset x method: keep the feature variant with the highest mean validation AP over seeds.\n  2. per dataset: the method with the highest mean validation AP.\n  3. one overall method: among methods run on all four tasks, the lowest mean rank of\n     validation AP across the four tasks (ties: higher mean validation AP).",
+  "overall_method": "xgb",
+  "overall_ranking": [
+    {
+      "method": "xgb",
+      "tasks": 4,
+      "mean_val_rank": 1.0,
+      "mean_val_AP": 0.7883664080738644,
+      "mean_test_AP": 0.5755171722858093,
+      "mean_test_F1": 0.5487934844951566
+    },
+    {
+      "method": "rf",
+      "tasks": 4,
+      "mean_val_rank": 2.75,
+      "mean_val_AP": 0.6760399888841875,
+      "mean_test_AP": 0.5645624089529262,
+      "mean_test_F1": 0.5390831311219704
+    },
+    {
+      "method": "ada",
+      "tasks": 4,
+      "mean_val_rank": 3.0,
+      "mean_val_AP": 0.6807803155649111,
+      "mean_test_AP": 0.5538122159873394,
+      "mean_test_F1": 0.53586281815114
+    },
+    {
+      "method": "lgbm",
+      "tasks": 4,
+      "mean_val_rank": 3.25,
+      "mean_val_AP": 0.6319345477873658,
+      "mean_test_AP": 0.4670734412743111,
+      "mean_test_F1": 0.5093140723162961
+    }
+  ],
+  "per_dataset_best_by_validation": {
+    "sapienza": {
+      "method": "xgb",
+      "variant": "raw",
+      "val_AP": 0.9654761602275787,
+      "test_AP": 0.9649859468386236,
+      "test_F1": 0.9098983915422272
+    },
+    "sd-stock": {
+      "method": "sd-fmm-public",
+      "variant": "finetune",
+      "val_AP": 0.7039000726456051,
+      "test_AP": 0.6159764100672237,
+      "test_F1": 0.6062994357143435
+    },
+    "sd-crypto": {
+      "method": "xgb",
+      "variant": "causal",
+      "val_AP": 0.8139745482103656,
+      "test_AP": 0.6571414420249208,
+      "test_F1": 0.6091641888454468
+    },
+    "tabformer": {
+      "method": "xgb",
+      "variant": "agg+seq",
+      "val_AP": 0.7695151062194195,
+      "test_AP": 0.07804017039793548,
+      "test_F1": 0.0591319714147499
+    }
+  },
+  "chosen_method_per_dataset": {
+    "sapienza": {
+      "variant": "raw",
+      "val_AP": 0.9654761602275787,
+      "test_AP": 0.9649859468386236,
+      "test_AP_sd": 0.0025967883763451036,
+      "test_F1": 0.9098983915422272,
+      "test_F1_sd": 0.007915939433259554,
+      "test_precision": 0.9485916891062476,
+      "test_recall": 0.8744588744588744,
+      "test_TP": 67.33333333333333,
+      "test_FP": 3.6666666666666665
+    },
+    "sd-stock": {
+      "variant": "raw",
+      "val_AP": 0.6044998176380935,
+      "test_AP": 0.6019011298817575,
+      "test_AP_sd": 0.014807098970112093,
+      "test_F1": 0.6169793861782028,
+      "test_F1_sd": 0.011099429117448186,
+      "test_precision": 0.636774193548387,
+      "test_recall": 0.5993265993265994,
+      "test_TP": 59.333333333333336,
+      "test_FP": 34.0
+    },
+    "sd-crypto": {
+      "variant": "causal",
+      "val_AP": 0.8139745482103656,
+      "test_AP": 0.6571414420249208,
+      "test_AP_sd": 0.013851490202129826,
+      "test_F1": 0.6091641888454468,
+      "test_F1_sd": 0.006813569002344657,
+      "test_precision": 0.7532292269134374,
+      "test_recall": 0.5343137254901961,
+      "test_TP": 36.333333333333336,
+      "test_FP": 15.0
+    },
+    "tabformer": {
+      "variant": "agg+seq",
+      "val_AP": 0.7695151062194195,
+      "test_AP": 0.07804017039793548,
+      "test_AP_sd": 0.008884137335919367,
+      "test_F1": 0.0591319714147499,
+      "test_F1_sd": 0.006918247999517668,
+      "test_precision": 0.17281975375656808,
+      "test_recall": 0.03569824876515492,
+      "test_TP": 159.0,
+      "test_FP": 763.0
+    }
+  }
+}

@@ -125,7 +125,7 @@ def main():
                                   train_negative_sample=negatives, rounds=rounds,
                                   fit_and_score_seconds=round(time.time() - start, 1)))
                 keep = Path(args.work) / 'scores'; keep.mkdir(exist_ok=True)
-                np.save(keep / f'{method}__{variant}__seed{seed}.npy', ste.astype(np.float16))
+                np.save(keep / f'{method}__{variant}__seed{seed}.npy', ste.astype(np.float32))
             del Xtr
 
 

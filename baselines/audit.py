@@ -3,7 +3,7 @@
 Usage: python -m baselines.audit [--work SCRATCH]     (SCRATCH is needed only for TabFormer labels)
 
 Market tasks: every run has its test scores in results/test_scores (float32).
-TabFormer: scores of the listed files in results/test_scores/tabformer (float16) are checked
+TabFormer: scores of the chosen method in results/test_scores/tabformer are checked
 when the scratch folder with the prepared labels is given.
 """
 import argparse
@@ -29,17 +29,18 @@ def main():
         for path in sorted((RESULTS / 'test_scores' / dataset).glob('*.npz')):
             run = json.loads((RESULTS / 'runs' / dataset / (path.stem + '.json')).read_text())['test']
             with np.load(path) as z:
-                score, threshold = z['score'].astype(np.float64), float(z['threshold'])
+                stored, threshold = z['score'], float(z['threshold'])
+            score = stored.astype(np.float64)
             assert len(score) == len(y) == run['n'] and int(y.sum()) == run['positives']
             ap = average_precision_score(y, score)
-            # stored scores are rounded (float32 / float16); compare alerts at the stored precision
-            alert = score >= np.asarray(threshold, dtype=z['score'].dtype if False else np.float64)
+            # scores were rounded when stored, so the threshold is rounded the same way before comparing
+            alert = stored >= stored.dtype.type(threshold)
             tp, fp = int((alert & (y == 1)).sum()), int((alert & (y == 0)).sum())
             worst_ap = max(worst_ap, abs(ap - run['AP'])); checked += 1
             if (tp, fp) != (run['TP'], run['FP']):
                 count_mismatch.append(dict(file=f'{dataset}/{path.name}', recorded=[run['TP'], run['FP']], recomputed=[tp, fp]))
     out = dict(files_checked=checked, max_abs_AP_difference=worst_ap, alert_count_mismatches=count_mismatch,
-               note='differences come only from rounding of stored scores (float32 market, float16 TabFormer)')
+               note='alerts are recomputed from the stored scores with the stored threshold')
     (RESULTS / 'audit.json').write_text(json.dumps(out, indent=2) + '\n')
     print(json.dumps(out, indent=2))
 

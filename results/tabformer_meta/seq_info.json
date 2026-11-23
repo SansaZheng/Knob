@@ -1,0 +1,575 @@
+{
+  "parameters": 53753,
+  "hidden": 64,
+  "block": 256,
+  "vocabulary": {
+    "mcc": 109,
+    "amount": 32,
+    "gap": 17,
+    "chip": 3,
+    "hour": 24,
+    "weekday": 7,
+    "state": 64,
+    "error": 2,
+    "city_changed": 2,
+    "seen_merchant": 2
+  },
+  "pretraining_targets": [
+    "mcc",
+    "amount",
+    "gap",
+    "chip",
+    "hour"
+  ],
+  "training_segments": 64455,
+  "steps": 1510,
+  "batch": 128,
+  "training_transactions_seen": 49479680,
+  "training_transactions_available": 17068962,
+  "wall_minutes_cap": 25.0,
+  "epochs": 3,
+  "seed": 42,
+  "labels_used": false,
+  "loss_log": [
+    {
+      "step": 25,
+      "seconds": 7,
+      "mcc": 4.6679,
+      "amount": 3.5176,
+      "gap": 2.8141,
+      "chip": 1.0156,
+      "hour": 3.1842
+    },
+    {
+      "step": 50,
+      "seconds": 15,
+      "mcc": 4.1822,
+      "amount": 3.4883,
+      "gap": 2.3621,
+      "chip": 0.4981,
+      "hour": 3.0822
+    },
+    {
+      "step": 75,
+      "seconds": 22,
+      "mcc": 3.3068,
+      "amount": 3.465,
+      "gap": 2.0813,
+      "chip": 0.4445,
+      "hour": 2.9785
+    },
+    {
+      "step": 100,
+      "seconds": 30,
+      "mcc": 3.1935,
+      "amount": 3.4566,
+      "gap": 2.0114,
+      "chip": 0.3653,
+      "hour": 2.9861
+    },
+    {
+      "step": 125,
+      "seconds": 36,
+      "mcc": 3.0437,
+      "amount": 3.4303,
+      "gap": 1.9592,
+      "chip": 0.3342,
+      "hour": 2.9484
+    },
+    {
+      "step": 150,
+      "seconds": 43,
+      "mcc": 3.0752,
+      "amount": 3.4045,
+      "gap": 1.8867,
+      "chip": 0.3427,
+      "hour": 2.8978
+    },
+    {
+      "step": 175,
+      "seconds": 50,
+      "mcc": 2.9824,
+      "amount": 3.39,
+      "gap": 1.8361,
+      "chip": 0.31,
+      "hour": 2.8678
+    },
+    {
+      "step": 200,
+      "seconds": 58,
+      "mcc": 2.9203,
+      "amount": 3.3495,
+      "gap": 1.8182,
+      "chip": 0.3204,
+      "hour": 2.8228
+    },
+    {
+      "step": 225,
+      "seconds": 65,
+      "mcc": 2.8809,
+      "amount": 3.3355,
+      "gap": 1.8121,
+      "chip": 0.2972,
+      "hour": 2.7392
+    },
+    {
+      "step": 250,
+      "seconds": 72,
+      "mcc": 2.9442,
+      "amount": 3.3164,
+      "gap": 1.7904,
+      "chip": 0.3171,
+      "hour": 2.6865
+    },
+    {
+      "step": 275,
+      "seconds": 80,
+      "mcc": 2.889,
+      "amount": 3.2973,
+      "gap": 1.7829,
+      "chip": 0.3116,
+      "hour": 2.639
+    },
+    {
+      "step": 300,
+      "seconds": 86,
+      "mcc": 2.8373,
+      "amount": 3.272,
+      "gap": 1.7612,
+      "chip": 0.285,
+      "hour": 2.5462
+    },
+    {
+      "step": 325,
+      "seconds": 94,
+      "mcc": 2.7926,
+      "amount": 3.2381,
+      "gap": 1.7584,
+      "chip": 0.3613,
+      "hour": 2.5888
+    },
+    {
+      "step": 350,
+      "seconds": 101,
+      "mcc": 2.7928,
+      "amount": 3.2334,
+      "gap": 1.7334,
+      "chip": 0.306,
+      "hour": 2.5153
+    },
+    {
+      "step": 375,
+      "seconds": 107,
+      "mcc": 2.7955,
+      "amount": 3.249,
+      "gap": 1.7293,
+      "chip": 0.3011,
+      "hour": 2.4906
+    },
+    {
+      "step": 400,
+      "seconds": 114,
+      "mcc": 2.857,
+      "amount": 3.2282,
+      "gap": 1.7153,
+      "chip": 0.2885,
+      "hour": 2.4687
+    },
+    {
+      "step": 425,
+      "seconds": 121,
+      "mcc": 2.7438,
+      "amount": 3.1814,
+      "gap": 1.7123,
+      "chip": 0.3418,
+      "hour": 2.4505
+    },
+    {
+      "step": 450,
+      "seconds": 127,
+      "mcc": 2.7706,
+      "amount": 3.1871,
+      "gap": 1.7049,
+      "chip": 0.3381,
+      "hour": 2.4103
+    },
+    {
+      "step": 475,
+      "seconds": 134,
+      "mcc": 2.8005,
+      "amount": 3.2221,
+      "gap": 1.6923,
+      "chip": 0.3017,
+      "hour": 2.4107
+    },
+    {
+      "step": 500,
+      "seconds": 140,
+      "mcc": 2.7145,
+      "amount": 3.1755,
+      "gap": 1.6831,
+      "chip": 0.3074,
+      "hour": 2.4011
+    },
+    {
+      "step": 525,
+      "seconds": 147,
+      "mcc": 2.7947,
+      "amount": 3.162,
+      "gap": 1.6852,
+      "chip": 0.2999,
+      "hour": 2.4251
+    },
+    {
+      "step": 550,
+      "seconds": 154,
+      "mcc": 2.7837,
+      "amount": 3.1792,
+      "gap": 1.6814,
+      "chip": 0.2977,
+      "hour": 2.4072
+    },
+    {
+      "step": 575,
+      "seconds": 161,
+      "mcc": 2.7215,
+      "amount": 3.1723,
+      "gap": 1.6651,
+      "chip": 0.3204,
+      "hour": 2.3736
+    },
+    {
+      "step": 600,
+      "seconds": 168,
+      "mcc": 2.6922,
+      "amount": 3.1662,
+      "gap": 1.6688,
+      "chip": 0.312,
+      "hour": 2.3514
+    },
+    {
+      "step": 625,
+      "seconds": 174,
+      "mcc": 2.7779,
+      "amount": 3.1362,
+      "gap": 1.6797,
+      "chip": 0.2669,
+      "hour": 2.3602
+    },
+    {
+      "step": 650,
+      "seconds": 180,
+      "mcc": 2.7999,
+      "amount": 3.1697,
+      "gap": 1.6871,
+      "chip": 0.3118,
+      "hour": 2.3738
+    },
+    {
+      "step": 675,
+      "seconds": 187,
+      "mcc": 2.7427,
+      "amount": 3.1437,
+      "gap": 1.6688,
+      "chip": 0.3026,
+      "hour": 2.4107
+    },
+    {
+      "step": 700,
+      "seconds": 194,
+      "mcc": 2.6313,
+      "amount": 3.1487,
+      "gap": 1.6623,
+      "chip": 0.2873,
+      "hour": 2.3102
+    },
+    {
+      "step": 725,
+      "seconds": 201,
+      "mcc": 2.6949,
+      "amount": 3.123,
+      "gap": 1.6722,
+      "chip": 0.3201,
+      "hour": 2.3692
+    },
+    {
+      "step": 750,
+      "seconds": 208,
+      "mcc": 2.6843,
+      "amount": 3.1455,
+      "gap": 1.6703,
+      "chip": 0.2809,
+      "hour": 2.3243
+    },
+    {
+      "step": 775,
+      "seconds": 216,
+      "mcc": 2.676,
+      "amount": 3.121,
+      "gap": 1.6665,
+      "chip": 0.3024,
+      "hour": 2.3148
+    },
+    {
+      "step": 800,
+      "seconds": 222,
+      "mcc": 2.7031,
+      "amount": 3.1104,
+      "gap": 1.6791,
+      "chip": 0.3323,
+      "hour": 2.3586
+    },
+    {
+      "step": 825,
+      "seconds": 229,
+      "mcc": 2.7329,
+      "amount": 3.1312,
+      "gap": 1.6809,
+      "chip": 0.3207,
+      "hour": 2.3337
+    },
+    {
+      "step": 850,
+      "seconds": 235,
+      "mcc": 2.699,
+      "amount": 3.1169,
+      "gap": 1.6559,
+      "chip": 0.3097,
+      "hour": 2.2998
+    },
+    {
+      "step": 875,
+      "seconds": 241,
+      "mcc": 2.6765,
+      "amount": 3.1099,
+      "gap": 1.6683,
+      "chip": 0.3176,
+      "hour": 2.3438
+    },
+    {
+      "step": 900,
+      "seconds": 247,
+      "mcc": 2.6547,
+      "amount": 3.101,
+      "gap": 1.6634,
+      "chip": 0.2839,
+      "hour": 2.2813
+    },
+    {
+      "step": 925,
+      "seconds": 254,
+      "mcc": 2.6671,
+      "amount": 3.1105,
+      "gap": 1.6618,
+      "chip": 0.2888,
+      "hour": 2.3195
+    },
+    {
+      "step": 950,
+      "seconds": 260,
+      "mcc": 2.654,
+      "amount": 3.1264,
+      "gap": 1.6564,
+      "chip": 0.2921,
+      "hour": 2.298
+    },
+    {
+      "step": 975,
+      "seconds": 267,
+      "mcc": 2.767,
+      "amount": 3.143,
+      "gap": 1.661,
+      "chip": 0.312,
+      "hour": 2.3504
+    },
+    {
+      "step": 1000,
+      "seconds": 273,
+      "mcc": 2.5777,
+      "amount": 3.0883,
+      "gap": 1.6559,
+      "chip": 0.3195,
+      "hour": 2.2548
+    },
+    {
+      "step": 1025,
+      "seconds": 280,
+      "mcc": 2.5391,
+      "amount": 3.0908,
+      "gap": 1.6415,
+      "chip": 0.3129,
+      "hour": 2.2583
+    },
+    {
+      "step": 1050,
+      "seconds": 286,
+      "mcc": 2.734,
+      "amount": 3.1307,
+      "gap": 1.6568,
+      "chip": 0.3244,
+      "hour": 2.3281
+    },
+    {
+      "step": 1075,
+      "seconds": 293,
+      "mcc": 2.6642,
+      "amount": 3.1119,
+      "gap": 1.6528,
+      "chip": 0.3041,
+      "hour": 2.2771
+    },
+    {
+      "step": 1100,
+      "seconds": 299,
+      "mcc": 2.6221,
+      "amount": 3.0762,
+      "gap": 1.661,
+      "chip": 0.2884,
+      "hour": 2.2673
+    },
+    {
+      "step": 1125,
+      "seconds": 305,
+      "mcc": 2.7,
+      "amount": 3.094,
+      "gap": 1.6608,
+      "chip": 0.2815,
+      "hour": 2.2863
+    },
+    {
+      "step": 1150,
+      "seconds": 312,
+      "mcc": 2.6901,
+      "amount": 3.102,
+      "gap": 1.6603,
+      "chip": 0.2959,
+      "hour": 2.2964
+    },
+    {
+      "step": 1175,
+      "seconds": 319,
+      "mcc": 2.5877,
+      "amount": 3.0782,
+      "gap": 1.6355,
+      "chip": 0.2923,
+      "hour": 2.243
+    },
+    {
+      "step": 1200,
+      "seconds": 325,
+      "mcc": 2.6345,
+      "amount": 3.065,
+      "gap": 1.6659,
+      "chip": 0.2942,
+      "hour": 2.2571
+    },
+    {
+      "step": 1225,
+      "seconds": 332,
+      "mcc": 2.6772,
+      "amount": 3.1065,
+      "gap": 1.6555,
+      "chip": 0.3005,
+      "hour": 2.302
+    },
+    {
+      "step": 1250,
+      "seconds": 339,
+      "mcc": 2.7107,
+      "amount": 3.1218,
+      "gap": 1.6575,
+      "chip": 0.28,
+      "hour": 2.3253
+    },
+    {
+      "step": 1275,
+      "seconds": 346,
+      "mcc": 2.6293,
+      "amount": 3.1071,
+      "gap": 1.6502,
+      "chip": 0.3077,
+      "hour": 2.2418
+    },
+    {
+      "step": 1300,
+      "seconds": 353,
+      "mcc": 2.6982,
+      "amount": 3.1074,
+      "gap": 1.6595,
+      "chip": 0.3096,
+      "hour": 2.2409
+    },
+    {
+      "step": 1325,
+      "seconds": 360,
+      "mcc": 2.6162,
+      "amount": 3.0587,
+      "gap": 1.6609,
+      "chip": 0.2909,
+      "hour": 2.2583
+    },
+    {
+      "step": 1350,
+      "seconds": 366,
+      "mcc": 2.7222,
+      "amount": 3.1154,
+      "gap": 1.6558,
+      "chip": 0.3201,
+      "hour": 2.3113
+    },
+    {
+      "step": 1375,
+      "seconds": 372,
+      "mcc": 2.7061,
+      "amount": 3.1026,
+      "gap": 1.6534,
+      "chip": 0.3092,
+      "hour": 2.3096
+    },
+    {
+      "step": 1400,
+      "seconds": 380,
+      "mcc": 2.6445,
+      "amount": 3.078,
+      "gap": 1.6494,
+      "chip": 0.3,
+      "hour": 2.273
+    },
+    {
+      "step": 1425,
+      "seconds": 386,
+      "mcc": 2.678,
+      "amount": 3.1,
+      "gap": 1.6456,
+      "chip": 0.2724,
+      "hour": 2.3003
+    },
+    {
+      "step": 1450,
+      "seconds": 394,
+      "mcc": 2.6112,
+      "amount": 3.0758,
+      "gap": 1.6544,
+      "chip": 0.303,
+      "hour": 2.2778
+    },
+    {
+      "step": 1475,
+      "seconds": 401,
+      "mcc": 2.6757,
+      "amount": 3.1231,
+      "gap": 1.6576,
+      "chip": 0.2903,
+      "hour": 2.2656
+    },
+    {
+      "step": 1500,
+      "seconds": 408,
+      "mcc": 2.6908,
+      "amount": 3.1074,
+      "gap": 1.6599,
+      "chip": 0.3129,
+      "hour": 2.2907
+    }
+  ]
+}
